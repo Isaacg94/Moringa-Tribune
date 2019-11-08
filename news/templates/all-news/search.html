@@ -1,0 +1,39 @@
+{%extends 'all-news/base.html'%} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    
+    {% block content %}
+    <div class="container">
+    
+      <div class="row">
+        {% if articles%}
+          <p style="padding-top: 20px; padding-bottom: 20px; font-family: 'Yantramanav', sans-serif;">Found {{ articles|length }} of searched term {{message}}</p>
+        {% else %}
+          <p style="padding-top: 20px; padding-bottom: 20px; font-family: 'Yantramanav', sans-serif;"> Found 0 articles for the search term {{message}}</p>
+        {% endif %}
+    
+      </div>
+    
+      <div class="row">
+    
+      {% if articles %}
+        {% for article in articles %}
+          <div class="col-sm-6 col-md-3">
+              <h2>{{article.title}}</h2>
+              <hr>
+          </div>
+        {% endfor %}
+      {% endif %}
+      </div>
+    </div>
+    {% endblock %}
+  
+</body>
+</html>

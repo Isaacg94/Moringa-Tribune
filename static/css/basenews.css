@@ -1,0 +1,130 @@
+h3 {
+    /* font-family: 'Yantramanav', sans-serif;
+    font-size: 42px;
+    font-weight: bold; */
+    font-family: 'Jomolhari', serif;
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(110, 110, 110);
+    margin-top: 1%;
+}
+h2 {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar-brand,a {
+    font-family: 'Cormorant SC', serif;
+    font-size: 25px;
+    color: black;
+}
+.navbar-brand:hover {
+    color: rgb(78, 87, 75);
+}
+.navbar {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+    background-color: rgba(255, 255, 255, 0.97);
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+}
+
+.date {
+    margin-bottom: 3%;
+}
+.landing{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:right;
+    background-position: bottom;
+    -webkit-background-size: cover;
+    /* height: 310px; */
+    height: 70%;
+
+}
+.cover.container-fluid{
+    background: radial-gradient(circle, rgba(62,70,52,1) 0%, rgba(53,54,50,1) 75%);
+    height: inherit;
+}
+.heading{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+}
+.title{
+    margin-top: 0 auto;
+    padding-top: 2%;
+    font-size: 45px;
+}
+.title p{
+    border-right: 1px solid rgb(204, 212, 200);
+    text-align: right;
+    padding-right: 20px;
+
+}
+.pagetitle{
+    margin-top: 0 auto;
+    padding-top: 4.7%;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    font-family: 'Yantramanav', sans-serif;
+    color: rgba(225, 230, 215, 0.781);
+    line-height: 20px;
+}
+
+.footer {
+    margin-top: 10%;
+    background-color: #060705;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 766px) {
+    div.col-md-7 {
+        text-align: center;
+    }
+    div.col-md-5 {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .pagetitle{
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+    .title p{
+        border: 0px;
+        border-bottom: 1px solid rgb(208, 212, 200);
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    div.col-md-4{
+
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    .sources{
+        height: inherit;
+    }
+
+}
+.form-control:focus {
+    box-shadow: none;
+}
+  
+.form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+}
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.rounded {
+    border-radius: 150px;
+}

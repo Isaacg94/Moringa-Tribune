@@ -1,0 +1,41 @@
+{%extends 'all-news/base.html'%}
+
+{% block content %}
+
+<div class="container" style="padding: 3%; width: 60%; background: rgba(253, 253, 253, 0.952);">
+  <div class="row">
+
+    <div class="title">
+      <h2 class="">{{article.title}}</h2>
+      <hr>
+    </div>
+
+  </div>
+  <div class="row">
+
+    <div class="col-md-10">
+      <h3 style="text-transform: uppercase;" class='date'>Posted {{article.pub_date|timesince}} by
+        {{article.editor.first_name}}</strong></h3>
+    </div>
+    <div class="col-md-2" style="float: right;">
+      <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a> <a
+        href="https://telegram.me/share/url?url=%3CURL%3E&text=%3CTEXT%3E"><i class="fab fa-telegram"></i></a> <a
+        href="https://twitter.com/porridgelaugh"><i class="fab fa-twitter"></i></a>
+    </div>
+
+  </div>
+
+  <div class="row" style="margin-bottom: 4%; margin-top: 4%;">
+
+    <img src="{{article.article_image.url}}" class="img-responsive" alt="" width="60%">
+  </div>
+
+  <div class="row">
+    <p style="font-family: 'Quattrocento Sans', sans-serif;">{{article.post}}</p>
+  </div>
+
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-inverse">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'newsToday' %}">The Moringa Tribune</a>
+            <!-- Adding a search form  -->
+      <div class="col-sm-4 col-md-4 navbar-right">
+
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+
+          <!-- <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Article" name="article">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </div> -->
+
+          <div class="p-1 bg-light rounded rounded-pill shadow-sm">
+            <div class="input-group">
+              <input type="text" placeholder="Search Article" aria-describedby="button-addon1" class="form-control border-0 bg-light" name="article">
+              <div class="input-group-btn">
+                <button id="button-addon1" type="submit" class="btn btn-link text-secondary"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <!-- search form end -->
+      
+        </div>
+    </nav>
+
+</body>
+
+</html>

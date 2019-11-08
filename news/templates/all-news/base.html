@@ -1,0 +1,94 @@
+{% load bootstrap4 %}
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if title %}
+    <title>Moringa Tribune - {{title}}</title>
+    {% else %}
+    <title> Moringa Tribune </title>
+    {% endif %}
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/basenews.css' %}">
+    <link
+        href="https://fonts.googleapis.com/css?family=Cormorant+SC:700|Hind+Guntur:700|Open+Sans|Yantramanav&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jomolhari&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento|Vollkorn&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+
+    {% endblock %}
+
+</head>
+
+<body>
+    {% include "navbar.html" %}
+
+    
+    <!-- <div class="container-fluid" style="background-color: rgb(238, 238, 238);">
+        <div class="row" style="padding: 2%;">
+            <div class="col-md-5" style="text-align: right; border-right: 1px solid #000;">
+                <img src="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/23/Moringa%20Logo-02.png"
+                    alt="" width="20%">
+
+            </div>
+            <div class="col-md-7">
+
+                <h1>Your One Stop To</h1>
+                <h4>Tech, News & Everything in Between</h4>
+
+            </div>
+
+        </div>
+
+    </div> -->
+
+    <div class="landing">
+            <div class="cover container-fluid">
+                <div class="heading">
+                    <div class="row">
+                        <div class="col-md-5 title">
+                            <p><img src="https://instructure-uploads-eu.s3-eu-west-1.amazonaws.com/account_118060000000000001/attachments/23/Moringa%20Logo-02.png"
+                                alt="" width="20%"><br> </p>
+                        </div>
+                        <div class="col-md-7 pagetitle">
+                            <p>Your One Stop To <br><span style="font-family: 'Cormorant Garamond', serif;
+                                "><em>Tech, News and Everything in Between</em></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block content %}
+    <div class="container">
+        <h3 style="text-transform: uppercase;" class='date'>Posted On {{date|date:"l d-F Y"}}</h3> {%endblock%}
+
+    </div>
+
+    <!-- <div class="container-fluid footer">
+        <footer id="sticky-footer" class="py-4 text-white-50">
+            <div class="container text-center">
+                <small>Copyright &copy; Gichuru Isaac</small>
+            </div>
+
+        </footer>
+
+    </div> -->
+
+
+    {% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    {% bootstrap_javascript %}
+    {% endblock %}
+
+</body>
+
+</html>
