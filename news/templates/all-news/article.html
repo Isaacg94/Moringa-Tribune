@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container" style="padding: 3%; width: 60%; background: rgba(253, 253, 253, 0.952);">
+<!-- <div class="container" style="padding: 3%; width: 60%; background: rgba(253, 253, 253, 0.952);">
   <div class="row">
 
     <div class="title">
@@ -36,6 +36,29 @@
 
 
 
-</div>
+</div> -->
+
+<div class="container">
+
+    <div class="row">
+      <img src="{{article.article_image.url}}"  class="img-responsive" alt="">
+    </div>
+ 
+    <div class="row">
+      <h1 class="text-center">{{article.title}}</h1>
+    </div>
+ 
+    <div class="row">
+      {% autoescape on %}
+      {{article.post| safe}}
+     {% endautoescape %}
+ 
+    </div>
+ 
+    <div class="row">
+      <p>Posted {{article.pub_date|timesince}} by {{article.editor.first_name}}</p>
+    </div>
+ 
+  </div>
 
 {% endblock %}

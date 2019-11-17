@@ -3,10 +3,10 @@ h3 {
     font-size: 42px;
     font-weight: bold; */
     font-family: 'Jomolhari', serif;
-    font-size: 15px;
+    /* font-size: 15px; */
     font-weight: normal;
     color: rgb(110, 110, 110);
-    margin-top: 1%;
+    
 }
 h2 {
     font-family: 'Yantramanav', sans-serif;
@@ -74,9 +74,10 @@ h2 {
 }
 
 .footer {
-    margin-top: 10%;
-    background-color: #060705;
+    margin-top: 1%;
+    /* background: linear-gradient(330deg, rgba(62,70,52,1) 0%, rgba(53,54,50,1) 75%); */
     font-family: 'Heebo', sans-serif;
+    color: black;
 }
 
 /* Responsive styling */

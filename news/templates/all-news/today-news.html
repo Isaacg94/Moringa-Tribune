@@ -1,5 +1,5 @@
 {%extends 'all-news/base.html'%}
-
+{% load bootstrap4 %}
 {% block content %}
 {{block.super}}
 
@@ -23,11 +23,21 @@
     </div>
   
     {% empty %}
-    <div class="row">
-      <h2 class="" style="text-align: left;">There No News Items</h2>
+    <div class="container">
+      <h2 class="" style="text-align: left; font-family: 'Yantramanav', sans-serif; font-size: 25px; font-weight: bold;">There No News Items</h2>
     </div>
     {% endfor %}
-  
+    <hr style="margin-top: 12%;">
+    <div class="container text-center bg-light rounded shadow p-3" style="width: 50%; padding: 2%; margin-top: 2%; background: linear-gradient(288deg, rgba(36,171,222,1) 0%, rgba(93,226,151,1) 100%);">
+
+      <form  action="{%url 'newsToday'%}" method="post">
+        {%csrf_token%}
+    
+        {% bootstrap_form letterForm layout='inline' %}
+        <input type="submit" value="Subscribe" class="btn btn-dark rounded rounded-pill center-block shadow-sm">
+      </form>
+    
+    </div>  
   </div>
 
 {% endblock %}
